@@ -11,7 +11,6 @@
 		12CB849E2683087800A2394D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB849D2683087800A2394D /* SceneDelegate.m */; };
 		12CB84A12683087800A2394D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84A02683087800A2394D /* ViewController.m */; };
 		12CB84A42683087800A2394D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12CB84A22683087800A2394D /* Main.storyboard */; };
-		12CB84A72683087800A2394D /* AttendenceManangent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84A52683087800A2394D /* AttendenceManangent.xcdatamodeld */; };
 		12CB84A92683087900A2394D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CB84A82683087900A2394D /* Assets.xcassets */; };
 		12CB84AC2683087900A2394D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12CB84AA2683087900A2394D /* LaunchScreen.storyboard */; };
 		12CB84AF2683087900A2394D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84AE2683087900A2394D /* main.m */; };
@@ -45,7 +44,6 @@
 		12CB849F2683087800A2394D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		12CB84A02683087800A2394D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		12CB84A32683087800A2394D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12CB84A62683087800A2394D /* AttendenceManangent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AttendenceManangent.xcdatamodel; sourceTree = "<group>"; };
 		12CB84A82683087900A2394D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12CB84AB2683087900A2394D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12CB84AD2683087900A2394D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,18 +104,17 @@
 		12CB84982683087800A2394D /* AttendenceManangent */ = {
 			isa = PBXGroup;
 			children = (
+				12CB84E926839CCE00A2394D /* ViewControllers */,
+				12CB84DD26839C4300A2394D /* Models */,
 				12CB84992683087800A2394D /* AppDelegate.h */,
 				12CB849A2683087800A2394D /* AppDelegate.m */,
 				12CB849C2683087800A2394D /* SceneDelegate.h */,
 				12CB849D2683087800A2394D /* SceneDelegate.m */,
-				12CB849F2683087800A2394D /* ViewController.h */,
-				12CB84A02683087800A2394D /* ViewController.m */,
 				12CB84A22683087800A2394D /* Main.storyboard */,
 				12CB84A82683087900A2394D /* Assets.xcassets */,
 				12CB84AA2683087900A2394D /* LaunchScreen.storyboard */,
 				12CB84AD2683087900A2394D /* Info.plist */,
 				12CB84AE2683087900A2394D /* main.m */,
-				12CB84A52683087800A2394D /* AttendenceManangent.xcdatamodeld */,
 			);
 			path = AttendenceManangent;
 			sourceTree = "<group>";
@@ -138,6 +135,38 @@
 				12CB84C52683087900A2394D /* Info.plist */,
 			);
 			path = AttendenceManangentUITests;
+			sourceTree = "<group>";
+		};
+		12CB84DD26839C4300A2394D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12CB84DF26839C8A00A2394D /* AttendenceRecordModel */,
+				12CB84DE26839C6E00A2394D /* StudentModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12CB84DE26839C6E00A2394D /* StudentModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StudentModel;
+			sourceTree = "<group>";
+		};
+		12CB84DF26839C8A00A2394D /* AttendenceRecordModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AttendenceRecordModel;
+			sourceTree = "<group>";
+		};
+		12CB84E926839CCE00A2394D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12CB84A02683087800A2394D /* ViewController.m */,
+				12CB849F2683087800A2394D /* ViewController.h */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +235,7 @@
 				TargetAttributes = {
 					12CB84952683087800A2394D = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					12CB84B32683087900A2394D = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -270,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12CB84AF2683087900A2394D /* main.m in Sources */,
-				12CB84A72683087800A2394D /* AttendenceManangent.xcdatamodeld in Sources */,
 				12CB84A12683087800A2394D /* ViewController.m in Sources */,
 				12CB849B2683087800A2394D /* AppDelegate.m in Sources */,
 				12CB849E2683087800A2394D /* SceneDelegate.m in Sources */,
@@ -445,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AttendenceManangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +483,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagarro.AttendenceManangent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -462,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AttendenceManangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,6 +503,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagarro.AttendenceManangent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -586,19 +620,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		12CB84A52683087800A2394D /* AttendenceManangent.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				12CB84A62683087800A2394D /* AttendenceManangent.xcdatamodel */,
-			);
-			currentVersion = 12CB84A62683087800A2394D /* AttendenceManangent.xcdatamodel */;
-			path = AttendenceManangent.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 12CB848E2683087800A2394D /* Project object */;
 }
