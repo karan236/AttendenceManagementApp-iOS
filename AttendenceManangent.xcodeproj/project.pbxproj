@@ -11,6 +11,7 @@
 		127602BE2684AB0100A666A4 /* Students+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602BC2684AB0100A666A4 /* Students+CoreDataClass.m */; };
 		127602BF2684AB0100A666A4 /* Students+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602BD2684AB0100A666A4 /* Students+CoreDataProperties.m */; };
 		127602E62684B12000A666A4 /* AttendenceManangent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127602DE2684AD6000A666A4 /* AttendenceManangent.xcdatamodeld */; };
+		127602EC2684E1DF00A666A4 /* StudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602EB2684E1DF00A666A4 /* StudentListViewController.m */; };
 		12CB849B2683087800A2394D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB849A2683087800A2394D /* AppDelegate.m */; };
 		12CB849E2683087800A2394D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB849D2683087800A2394D /* SceneDelegate.m */; };
 		12CB84A12683087800A2394D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84A02683087800A2394D /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		127602BC2684AB0100A666A4 /* Students+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Students+CoreDataClass.m"; sourceTree = "<group>"; };
 		127602BD2684AB0100A666A4 /* Students+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Students+CoreDataProperties.m"; sourceTree = "<group>"; };
 		127602DF2684AD6000A666A4 /* AttendenceManangent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AttendenceManangent.xcdatamodel; sourceTree = "<group>"; };
+		127602EA2684E1DF00A666A4 /* StudentListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListViewController.h; sourceTree = "<group>"; };
+		127602EB2684E1DF00A666A4 /* StudentListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentListViewController.m; sourceTree = "<group>"; };
 		12CB84962683087800A2394D /* AttendenceManangent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceManangent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CB84992683087800A2394D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		12CB849A2683087800A2394D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +111,15 @@
 				127602962684623100A666A4 /* AddStudentViewController.h */,
 			);
 			path = AddStudentViewController;
+			sourceTree = "<group>";
+		};
+		127602F02684E1E500A666A4 /* StudentListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				127602EA2684E1DF00A666A4 /* StudentListViewController.h */,
+				127602EB2684E1DF00A666A4 /* StudentListViewController.m */,
+			);
+			path = StudentListViewController;
 			sourceTree = "<group>";
 		};
 		12CB848D2683087800A2394D = {
@@ -197,6 +209,7 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				127602F02684E1E500A666A4 /* StudentListViewController */,
 				1276029D2684625900A666A4 /* AddStudentViewController */,
 				1276029C2684624200A666A4 /* HomeViewController */,
 			);
@@ -341,6 +354,7 @@
 				12CB849B2683087800A2394D /* AppDelegate.m in Sources */,
 				12CB849E2683087800A2394D /* SceneDelegate.m in Sources */,
 				127602982684623100A666A4 /* AddStudentViewController.m in Sources */,
+				127602EC2684E1DF00A666A4 /* StudentListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

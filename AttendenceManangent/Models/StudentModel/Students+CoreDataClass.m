@@ -18,7 +18,7 @@
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
     NSFetchRequest *fetchRequest = [Students fetchRequest];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"rollNo == %lld AND studentClass == %@ AND name == %@", [[studentDetails valueForKey: @"rollNo"] integerValue], [studentDetails valueForKey: @"studentClass"], [studentDetails valueForKey: @"name"]];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"rollNo == %lld AND studentClass == %@", [[studentDetails valueForKey: @"rollNo"] integerValue], [studentDetails valueForKey: @"studentClass"]];
     
     NSError *error;
     NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
@@ -41,18 +41,41 @@
 }
 
 
-+(void)fetchAllDataFromStudentEntity{
++(NSArray *)fetchAllDataFromStudentEntity{
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
     NSFetchRequest *fetchRequest = [Students fetchRequest];
-        
+    NSSortDescriptor *sortByClass = [[NSSortDescriptor alloc] initWithKey:@"studentClass" ascending:YES];
+    NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"rollNo" ascending:YES];
+    NSSortDescriptor *sortByName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    
+    fetchRequest.sortDescriptors = @[sortByClass,sortByRollNo,sortByName];
+    
     NSError *error;
     NSArray *allStudentData = [context executeFetchRequest: fetchRequest error: &error];
     
-    for(Students *student in allStudentData){
-        NSLog(@"%lld %@ %@", student.rollNo, student.studentClass, student.name);
-    }
+    return allStudentData;
+}
+
++(NSArray *)fetchDataFromStudentEntityForStudentClass: (NSString *)studentClass{
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [Students fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@", studentClass];
+    
+    NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"rollNo" ascending:YES];
+    NSSortDescriptor *sortByName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    
+    fetchRequest.sortDescriptors = @[sortByRollNo, sortByName];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return retrievedData;
+    
 }
 @end

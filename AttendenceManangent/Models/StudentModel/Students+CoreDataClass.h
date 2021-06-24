@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Students : NSManagedObject
 +(BOOL)addStudentDetailsFromDictionary: (NSDictionary *) studentDetails;
-+(void)fetchAllDataFromStudentEntity;
++(NSArray *)fetchAllDataFromStudentEntity;
++(NSArray *)fetchDataFromStudentEntityForStudentClass: (NSString *)studentClass;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -114,7 +114,6 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
         
-        [Students fetchAllDataFromStudentEntity];
     }
 
 }
