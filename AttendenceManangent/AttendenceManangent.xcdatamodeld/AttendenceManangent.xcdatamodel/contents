@@ -14,7 +14,7 @@
         <attribute name="studentClass" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="AttendenceRecord" positionX="-54" positionY="18" width="128" height="119"/>
+        <element name="AttendenceRecord" positionX="253.04296875" positionY="-39.16796875" width="128" height="119"/>
         <element name="Students" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>
