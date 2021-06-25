@@ -1,0 +1,55 @@
+//
+//  AttendenceRecord+CoreDataClass.m
+//  AttendenceManangent
+//
+//  Created by Karan Ghorai on 25/06/21.
+//
+//
+
+#import "AttendenceRecord+CoreDataClass.h"
+#import "Students+CoreDataClass.h"
+#import "AppDelegate.h"
+@implementation AttendenceRecord
+
++(BOOL)doesAttendenceExistsForDate:(NSString *)date class:(NSString *)studentClass{
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND date == %@", studentClass, date];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return [retrievedData count] > 0;
+}
+
+
++(void)addAttendenceRecord:(NSArray *)studentData attendenceData:(NSArray *) attendenceData date:(NSString *)date topic:(NSString *)topic{
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    for (int i=0; i<[attendenceData count]; i++){
+        Students *currentStudentData = [studentData objectAtIndex:i];
+        NSString *currentStudentAttendenceData = [attendenceData objectAtIndex:i];
+        AttendenceRecord *attendenceRecord = [NSEntityDescription insertNewObjectForEntityForName: @"AttendenceRecord" inManagedObjectContext: context];
+        
+        if([currentStudentAttendenceData isEqualToString:@"1"]) {
+            attendenceRecord.attendence = @"Present";
+        }
+        else{
+            attendenceRecord.attendence = @"Absent";
+        }
+        
+        attendenceRecord.date = date;
+        attendenceRecord.name = currentStudentData.name;
+        attendenceRecord.rollNo = currentStudentData.rollNo;
+        attendenceRecord.studentClass = currentStudentData.studentClass;
+        attendenceRecord.topicTaught = topic;
+        
+        [appdelegate saveContext];
+    }
+}
+
+@end
