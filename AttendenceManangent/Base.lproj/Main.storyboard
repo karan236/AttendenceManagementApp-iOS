@@ -157,6 +157,8 @@
                     <navigationItem key="navigationItem" id="GKX-3L-yqI"/>
                     <connections>
                         <outlet property="classLabel" destination="rIP-zh-hhb" id="iK5-m3-Sl4"/>
+                        <outlet property="doneButton" destination="yp5-DX-CX2" id="hdT-YD-bQ2"/>
+                        <outlet property="resetButton" destination="IX5-vQ-E2e" id="c5A-nZ-Jct"/>
                         <outlet property="tableView" destination="5Hn-od-eWl" id="hr5-b3-WBk"/>
                     </connections>
                 </viewController>

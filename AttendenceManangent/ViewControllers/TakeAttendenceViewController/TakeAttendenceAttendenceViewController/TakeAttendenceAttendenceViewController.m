@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray *absentButtonsResponse;
 @property (strong, nonatomic) NSMutableArray *presentButtonResponse;
+@property (strong, nonatomic) IBOutlet UIButton *resetButton;
+@property (strong, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *classLabel;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -42,20 +44,29 @@
     _presentButtonResponse = [[NSMutableArray alloc] init];
     _studentAttendence = [[NSMutableArray alloc] init];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
     for (int i=0; i<[_studentsOfMentionedClass count]; i++){
         [_studentAttendence addObject:@"-1"];
     }
-}
-
--(void)viewDidAppear:(BOOL)animated {
     
     if ([_studentAttendence count] == 0){
         _classLabel.text = @"No data found";
-        
+        _resetButton.enabled = NO;
+        _doneButton.enabled = NO;
+        _resetButton.alpha = 0.5;
+        _doneButton.alpha = 0.5;
     }
     else{
         _classLabel.text =[NSString stringWithFormat:@"Class: %@", _studentClass];
+        _resetButton.enabled = YES;
+        _doneButton.enabled = YES;
+        _resetButton.alpha = 1;
+        _doneButton.alpha = 1;
     }
+    
 }
 
 -(void)setStudentClass:(NSString *)studentClass{
