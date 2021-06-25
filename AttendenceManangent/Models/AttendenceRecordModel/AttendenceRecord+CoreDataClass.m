@@ -7,8 +7,9 @@
 //
 
 #import "AttendenceRecord+CoreDataClass.h"
-#import "Students+CoreDataClass.h"
-#import "AppDelegate.h"
+#import "../StudentModel/Students+CoreDataClass.h"
+#import "../../AppDelegate.h"
+
 @implementation AttendenceRecord
 
 +(BOOL)doesAttendenceExistsForDate:(NSString *)date class:(NSString *)studentClass{
@@ -50,6 +51,23 @@
         
         [appdelegate saveContext];
     }
+}
+
++(NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass date:(NSString *)date{
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND date == %@", studentClass, date];
+    
+    NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"rollNo" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortByRollNo];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return retrievedData;
 }
 
 @end

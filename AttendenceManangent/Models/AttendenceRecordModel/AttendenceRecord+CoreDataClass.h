@@ -12,8 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AttendenceRecord : NSManagedObject
+
 +(BOOL)doesAttendenceExistsForDate:(NSString *)date class:(NSString *)studentClass;
 +(void)addAttendenceRecord:(NSArray *)studentData attendenceData:(NSArray *) attendenceData date:(NSString *)date topic:(NSString *)topic;
++(NSMutableArray *)fetchAttendenceRecordForClass:(NSString *)studentClass date:(NSString *)date;
+
 @end
 
 NS_ASSUME_NONNULL_END
