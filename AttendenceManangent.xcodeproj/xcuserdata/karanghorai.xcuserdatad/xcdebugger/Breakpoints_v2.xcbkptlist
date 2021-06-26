@@ -263,16 +263,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D5830E7A-C2A9-4734-98BC-CA293B45F18B"
+            uuid = "3CFB64D8-5FFC-426E-9135-B74480775F8F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AttendenceManangent/ViewControllers/TopicsTaughtViewController/TopicsTaughtViewController.m"
+            filePath = "AttendenceManangent/ViewControllers/AttendenceRecordOfAStudentViewController/AttendenceRecordOfAStudentViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-showTopicsButtonsAction:"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-showRecordButtonAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8753741-587D-4276-B3AC-47D644FB3418"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AttendenceManangent/ViewControllers/AttendenceRecordOfAStudentViewController/AttendenceRecordOfAStudentViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

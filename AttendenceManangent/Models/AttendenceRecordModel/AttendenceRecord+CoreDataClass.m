@@ -87,4 +87,21 @@
     return retrievedData;
 }
 
++ (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass rollNo:(NSString *)rollNo {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND rollNo == %@", studentClass, rollNo];
+    
+    NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortByRollNo];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return retrievedData;
+}
+
 @end

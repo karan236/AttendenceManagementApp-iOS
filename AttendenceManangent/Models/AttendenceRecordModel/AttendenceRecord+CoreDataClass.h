@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass;
 
++ (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass rollNo:(NSString *)rollNo;
+
 @end
 
 NS_ASSUME_NONNULL_END
