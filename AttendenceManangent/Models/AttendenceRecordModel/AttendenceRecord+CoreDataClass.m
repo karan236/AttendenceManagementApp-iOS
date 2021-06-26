@@ -53,7 +53,7 @@
     }
 }
 
-+(NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass date:(NSString *)date{
++ (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass date:(NSString *)date {
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
@@ -63,6 +63,23 @@
     
     NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"rollNo" ascending:YES];
     fetchRequest.sortDescriptors = @[sortByRollNo];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return retrievedData;
+}
+
++ (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@", studentClass];
+    
+    NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortByDate];
     
     NSError *error;
     NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];

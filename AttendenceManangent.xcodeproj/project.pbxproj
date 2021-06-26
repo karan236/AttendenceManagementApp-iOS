@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124A059D268518E900FB151C /* TakeAttendenceDetailsViewController.m */; };
+		1254F5572687475C0093E988 /* TopicsTaughtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1254F5562687475C0093E988 /* TopicsTaughtViewController.m */; };
 		127602982684623100A666A4 /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602972684623100A666A4 /* AddStudentViewController.m */; };
 		127602BE2684AB0100A666A4 /* Students+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602BC2684AB0100A666A4 /* Students+CoreDataClass.m */; };
 		127602BF2684AB0100A666A4 /* Students+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602BD2684AB0100A666A4 /* Students+CoreDataProperties.m */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		124A059C268518E900FB151C /* TakeAttendenceDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeAttendenceDetailsViewController.h; sourceTree = "<group>"; };
 		124A059D268518E900FB151C /* TakeAttendenceDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeAttendenceDetailsViewController.m; sourceTree = "<group>"; };
+		1254F5552687475C0093E988 /* TopicsTaughtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicsTaughtViewController.h; sourceTree = "<group>"; };
+		1254F5562687475C0093E988 /* TopicsTaughtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicsTaughtViewController.m; sourceTree = "<group>"; };
 		127602962684623100A666A4 /* AddStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
 		127602972684623100A666A4 /* AddStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddStudentViewController.m; sourceTree = "<group>"; };
 		127602BA2684AB0100A666A4 /* Students+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Students+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -135,6 +138,15 @@
 				1285270D26851C75008CE6AB /* TakeAttendenceAttendenceViewController.m */,
 			);
 			path = TakeAttendenceAttendenceViewController;
+			sourceTree = "<group>";
+		};
+		1254F55B268747630093E988 /* TopicsTaughtViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1254F5552687475C0093E988 /* TopicsTaughtViewController.h */,
+				1254F5562687475C0093E988 /* TopicsTaughtViewController.m */,
+			);
+			path = TopicsTaughtViewController;
 			sourceTree = "<group>";
 		};
 		1276029C2684624200A666A4 /* HomeViewController */ = {
@@ -264,6 +276,7 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1254F55B268747630093E988 /* TopicsTaughtViewController */,
 				12936C2C268649D20030B884 /* ViewAttendenceRecordViewController */,
 				124A059826850EE400FB151C /* TakeAttendenceViewController */,
 				127602F02684E1E500A666A4 /* StudentListViewController */,
@@ -404,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				127602E62684B12000A666A4 /* AttendenceManangent.xcdatamodeld in Sources */,
+				1254F5572687475C0093E988 /* TopicsTaughtViewController.m in Sources */,
 				124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */,
 				12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */,
 				12CB84AF2683087900A2394D /* main.m in Sources */,
