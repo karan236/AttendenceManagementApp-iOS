@@ -138,7 +138,7 @@
     }
     else{
         
-        NSLog(@"tapped on absent button with tag: %li and done", [sender tag]);
+//        NSLog(@"tapped on absent button with tag: %li and done", [sender tag]);
         UIButton *btn = [_absentButtonsResponse objectAtIndex:[sender tag]];
         
         btn.alpha = 1;
@@ -178,7 +178,7 @@
     }
     else{
         
-        NSLog(@"tapped on present button with tag: %li and done", [sender tag]);
+//        NSLog(@"tapped on present button with tag: %li and done", [sender tag]);
         UIButton *btn = [_presentButtonResponse objectAtIndex:[sender tag]];
         
         btn.alpha = 1;

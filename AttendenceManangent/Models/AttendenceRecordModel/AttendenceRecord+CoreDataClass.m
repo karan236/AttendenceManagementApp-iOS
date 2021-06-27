@@ -93,10 +93,27 @@
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
     NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND rollNo == %@", studentClass, rollNo];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND rollNo LIKE %@", studentClass, rollNo];
     
-    NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
-    fetchRequest.sortDescriptors = @[sortByRollNo];
+    NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortByDate];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    return retrievedData;
+}
+
++ (NSArray *)fetchAttendenceRecordForClass:(NSString *)studentClass rollNo:(NSString *)rollNo attendence:(NSString *)attendence {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND rollNo LIKE %@ AND attendence == %@", studentClass, rollNo, attendence];
+    
+    NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortByDate];
     
     NSError *error;
     NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];

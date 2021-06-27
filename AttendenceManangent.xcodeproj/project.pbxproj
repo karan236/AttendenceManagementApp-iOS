@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123A1C44268871F100861BBE /* TopicsMissedByStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A1C43268871F100861BBE /* TopicsMissedByStudentsViewController.m */; };
 		124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124A059D268518E900FB151C /* TakeAttendenceDetailsViewController.m */; };
 		1254F5572687475C0093E988 /* TopicsTaughtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1254F5562687475C0093E988 /* TopicsTaughtViewController.m */; };
 		1254F56226875F900093E988 /* AttendenceRecordOfAStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1254F56126875F900093E988 /* AttendenceRecordOfAStudentViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		123A1C42268871F100861BBE /* TopicsMissedByStudentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicsMissedByStudentsViewController.h; sourceTree = "<group>"; };
+		123A1C43268871F100861BBE /* TopicsMissedByStudentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicsMissedByStudentsViewController.m; sourceTree = "<group>"; };
 		124A059C268518E900FB151C /* TakeAttendenceDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeAttendenceDetailsViewController.h; sourceTree = "<group>"; };
 		124A059D268518E900FB151C /* TakeAttendenceDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeAttendenceDetailsViewController.m; sourceTree = "<group>"; };
 		1254F5552687475C0093E988 /* TopicsTaughtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicsTaughtViewController.h; sourceTree = "<group>"; };
@@ -116,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123A1C48268871F700861BBE /* TopicsMissedByStudentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				123A1C43268871F100861BBE /* TopicsMissedByStudentsViewController.m */,
+				123A1C42268871F100861BBE /* TopicsMissedByStudentsViewController.h */,
+			);
+			path = TopicsMissedByStudentViewController;
+			sourceTree = "<group>";
+		};
 		124A059826850EE400FB151C /* TakeAttendenceViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +300,7 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				123A1C48268871F700861BBE /* TopicsMissedByStudentViewController */,
 				1254F55F26875F640093E988 /* AttendenceRecordOfAStudentViewController */,
 				1254F55B268747630093E988 /* TopicsTaughtViewController */,
 				12936C2C268649D20030B884 /* ViewAttendenceRecordViewController */,
@@ -436,6 +449,7 @@
 				12CB84AF2683087900A2394D /* main.m in Sources */,
 				127602BE2684AB0100A666A4 /* Students+CoreDataClass.m in Sources */,
 				12CB84A12683087800A2394D /* ViewController.m in Sources */,
+				123A1C44268871F100861BBE /* TopicsMissedByStudentsViewController.m in Sources */,
 				127602BF2684AB0100A666A4 /* Students+CoreDataProperties.m in Sources */,
 				12CB849B2683087800A2394D /* AppDelegate.m in Sources */,
 				12CB849E2683087800A2394D /* SceneDelegate.m in Sources */,
