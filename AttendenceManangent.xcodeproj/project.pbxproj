@@ -31,6 +31,8 @@
 		12CB84AF2683087900A2394D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84AE2683087900A2394D /* main.m */; };
 		12CB84B92683087900A2394D /* AttendenceManangentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84B82683087900A2394D /* AttendenceManangentTests.m */; };
 		12CB84C42683087900A2394D /* AttendenceManangentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84C32683087900A2394D /* AttendenceManangentUITests.m */; };
+		12DFED2A268A400100B4CF0B /* DeleteStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12DFED29268A400100B4CF0B /* DeleteStudentViewController.m */; };
+		12DFED34268A403B00B4CF0B /* DeleteStudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12DFED33268A403B00B4CF0B /* DeleteStudentTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,10 @@
 		12CB84BF2683087900A2394D /* AttendenceManangentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendenceManangentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CB84C32683087900A2394D /* AttendenceManangentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendenceManangentUITests.m; sourceTree = "<group>"; };
 		12CB84C52683087900A2394D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DFED28268A400100B4CF0B /* DeleteStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeleteStudentViewController.h; sourceTree = "<group>"; };
+		12DFED29268A400100B4CF0B /* DeleteStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeleteStudentViewController.m; sourceTree = "<group>"; };
+		12DFED32268A403B00B4CF0B /* DeleteStudentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeleteStudentTableViewCell.h; sourceTree = "<group>"; };
+		12DFED33268A403B00B4CF0B /* DeleteStudentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeleteStudentTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +339,7 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				12DFED27268A3FB000B4CF0B /* DeleteStudentViewController */,
 				1282F0D92688FE9900E2DCEC /* EditAttendenceViewController */,
 				123A1C48268871F700861BBE /* TopicsMissedByStudentViewController */,
 				1254F55F26875F640093E988 /* AttendenceRecordOfAStudentViewController */,
@@ -344,6 +351,25 @@
 				1276029C2684624200A666A4 /* HomeViewController */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12DFED27268A3FB000B4CF0B /* DeleteStudentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12DFED28268A400100B4CF0B /* DeleteStudentViewController.h */,
+				12DFED29268A400100B4CF0B /* DeleteStudentViewController.m */,
+				12DFED31268A401600B4CF0B /* TableViewCell */,
+			);
+			path = DeleteStudentViewController;
+			sourceTree = "<group>";
+		};
+		12DFED31268A401600B4CF0B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				12DFED32268A403B00B4CF0B /* DeleteStudentTableViewCell.h */,
+				12DFED33268A403B00B4CF0B /* DeleteStudentTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				127602E62684B12000A666A4 /* AttendenceManangent.xcdatamodeld in Sources */,
+				12DFED2A268A400100B4CF0B /* DeleteStudentViewController.m in Sources */,
 				1254F5572687475C0093E988 /* TopicsTaughtViewController.m in Sources */,
 				124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */,
 				12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */,
@@ -486,6 +513,7 @@
 				12CB84A12683087800A2394D /* ViewController.m in Sources */,
 				123A1C44268871F100861BBE /* TopicsMissedByStudentsViewController.m in Sources */,
 				127602BF2684AB0100A666A4 /* Students+CoreDataProperties.m in Sources */,
+				12DFED34268A403B00B4CF0B /* DeleteStudentTableViewCell.m in Sources */,
 				12CB849B2683087800A2394D /* AppDelegate.m in Sources */,
 				12CB849E2683087800A2394D /* SceneDelegate.m in Sources */,
 				127602982684623100A666A4 /* AddStudentViewController.m in Sources */,

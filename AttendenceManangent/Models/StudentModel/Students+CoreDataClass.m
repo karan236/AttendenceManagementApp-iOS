@@ -12,7 +12,7 @@
 
 @implementation Students
 
-+(BOOL)addStudentDetailsFromDictionary:(NSDictionary *)studentDetails{
++ (BOOL)addStudentDetailsFromDictionary:(NSDictionary *)studentDetails {
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
@@ -41,7 +41,7 @@
 }
 
 
-+(NSArray *)fetchAllDataFromStudentEntity{
++ (NSArray *)fetchAllDataFromStudentEntity {
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
@@ -59,7 +59,7 @@
     return allStudentData;
 }
 
-+(NSArray *)fetchDataFromStudentEntityForStudentClass: (NSString *)studentClass{
++ (NSArray *)fetchDataFromStudentEntityForStudentClass: (NSString *)studentClass {
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
@@ -77,5 +77,23 @@
     
     return retrievedData;
     
+}
+
++ (void)deleteStudentForClass:(NSString *)studentClass rollNo:(NSInteger)rollNo {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetchRequest = [Students fetchRequest];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"rollNo == %lld AND studentClass == %@", rollNo, studentClass];
+    
+    NSError *error;
+    NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+    
+    [context deleteObject:[retrievedData objectAtIndex:0]];
+
+    NSLog(@"Class %@ roll %ld deleted", studentClass, (long)rollNo);
+    
+    [appdelegate saveContext];
 }
 @end

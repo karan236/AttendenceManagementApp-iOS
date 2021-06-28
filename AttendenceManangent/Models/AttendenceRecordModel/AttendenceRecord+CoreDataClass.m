@@ -12,7 +12,7 @@
 
 @implementation AttendenceRecord
 
-+(BOOL)doesAttendenceExistsForDate:(NSString *)date class:(NSString *)studentClass{
++ (BOOL)doesAttendenceExistsForDate:(NSString *)date class:(NSString *)studentClass {
     
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
@@ -27,7 +27,7 @@
 }
 
 
-+(void)addAttendenceRecord:(NSArray *)studentData attendenceData:(NSArray *) attendenceData date:(NSString *)date topic:(NSString *)topic{
++ (void)addAttendenceRecord:(NSArray *)studentData attendenceData:(NSArray *) attendenceData date:(NSString *)date topic:(NSString *)topic {
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
