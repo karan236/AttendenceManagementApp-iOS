@@ -16,6 +16,8 @@
 		127602BF2684AB0100A666A4 /* Students+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602BD2684AB0100A666A4 /* Students+CoreDataProperties.m */; };
 		127602E62684B12000A666A4 /* AttendenceManangent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127602DE2684AD6000A666A4 /* AttendenceManangent.xcdatamodeld */; };
 		127602EC2684E1DF00A666A4 /* StudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127602EB2684E1DF00A666A4 /* StudentListViewController.m */; };
+		1282F0DC2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1282F0DB2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.m */; };
+		1282F0E52688FF1F00E2DCEC /* EditAttendenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1282F0E42688FF1F00E2DCEC /* EditAttendenceViewController.m */; };
 		1285270E26851C75008CE6AB /* TakeAttendenceAttendenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1285270D26851C75008CE6AB /* TakeAttendenceAttendenceViewController.m */; };
 		12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 12936C1F268624B30030B884 /* AttendenceRecord+CoreDataClass.m */; };
 		12936C22268624B30030B884 /* AttendenceRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12936C20268624B30030B884 /* AttendenceRecord+CoreDataProperties.m */; };
@@ -66,6 +68,10 @@
 		127602DF2684AD6000A666A4 /* AttendenceManangent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AttendenceManangent.xcdatamodel; sourceTree = "<group>"; };
 		127602EA2684E1DF00A666A4 /* StudentListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListViewController.h; sourceTree = "<group>"; };
 		127602EB2684E1DF00A666A4 /* StudentListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentListViewController.m; sourceTree = "<group>"; };
+		1282F0DA2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAttendenceAttendenceViewController.h; sourceTree = "<group>"; };
+		1282F0DB2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAttendenceAttendenceViewController.m; sourceTree = "<group>"; };
+		1282F0E32688FF1F00E2DCEC /* EditAttendenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAttendenceViewController.h; sourceTree = "<group>"; };
+		1282F0E42688FF1F00E2DCEC /* EditAttendenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAttendenceViewController.m; sourceTree = "<group>"; };
 		1285270C26851C75008CE6AB /* TakeAttendenceAttendenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeAttendenceAttendenceViewController.h; sourceTree = "<group>"; };
 		1285270D26851C75008CE6AB /* TakeAttendenceAttendenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeAttendenceAttendenceViewController.m; sourceTree = "<group>"; };
 		12936C1D268624B30030B884 /* AttendenceRecord+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AttendenceRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -200,6 +206,33 @@
 			path = StudentListViewController;
 			sourceTree = "<group>";
 		};
+		1282F0C22688F4C900E2DCEC /* EditAttendenceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1282F0E32688FF1F00E2DCEC /* EditAttendenceViewController.h */,
+				1282F0E42688FF1F00E2DCEC /* EditAttendenceViewController.m */,
+			);
+			path = EditAttendenceViewController;
+			sourceTree = "<group>";
+		};
+		1282F0CC2688F61F00E2DCEC /* EditAttendenceAttendenceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1282F0DB2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.m */,
+				1282F0DA2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.h */,
+			);
+			path = EditAttendenceAttendenceViewController;
+			sourceTree = "<group>";
+		};
+		1282F0D92688FE9900E2DCEC /* EditAttendenceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1282F0C22688F4C900E2DCEC /* EditAttendenceViewController */,
+				1282F0CC2688F61F00E2DCEC /* EditAttendenceAttendenceViewController */,
+			);
+			path = EditAttendenceViewController;
+			sourceTree = "<group>";
+		};
 		12936C2C268649D20030B884 /* ViewAttendenceRecordViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +333,7 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1282F0D92688FE9900E2DCEC /* EditAttendenceViewController */,
 				123A1C48268871F700861BBE /* TopicsMissedByStudentViewController */,
 				1254F55F26875F640093E988 /* AttendenceRecordOfAStudentViewController */,
 				1254F55B268747630093E988 /* TopicsTaughtViewController */,
@@ -447,6 +481,7 @@
 				124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */,
 				12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */,
 				12CB84AF2683087900A2394D /* main.m in Sources */,
+				1282F0E52688FF1F00E2DCEC /* EditAttendenceViewController.m in Sources */,
 				127602BE2684AB0100A666A4 /* Students+CoreDataClass.m in Sources */,
 				12CB84A12683087800A2394D /* ViewController.m in Sources */,
 				123A1C44268871F100861BBE /* TopicsMissedByStudentsViewController.m in Sources */,
@@ -454,6 +489,7 @@
 				12CB849B2683087800A2394D /* AppDelegate.m in Sources */,
 				12CB849E2683087800A2394D /* SceneDelegate.m in Sources */,
 				127602982684623100A666A4 /* AddStudentViewController.m in Sources */,
+				1282F0DC2688FF0000E2DCEC /* EditAttendenceAttendenceViewController.m in Sources */,
 				1254F56226875F900093E988 /* AttendenceRecordOfAStudentViewController.m in Sources */,
 				12936C3226864F640030B884 /* ViewAttendenceViewController.m in Sources */,
 				12936C22268624B30030B884 /* AttendenceRecord+CoreDataProperties.m in Sources */,

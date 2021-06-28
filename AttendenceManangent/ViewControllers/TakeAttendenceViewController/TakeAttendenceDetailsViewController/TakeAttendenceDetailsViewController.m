@@ -22,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
+    
+//    _datePickerInput.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:10*60*60];
+    
     _studentClasses = @[@"Nursery", @"Kindergarten", @"I", @"II", @"III", @"IV", @"V", @"VI", @"VII", @"VIII", @"IX", @"X", @"XI", @"XII"];
     
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popTakeAttendenceDetailsViewController)];
@@ -47,7 +51,12 @@
        _takeAttendenceAttendenceViewController = [segue destinationViewController];
        _takeAttendenceAttendenceViewController.studentClass = _studentClassInputField.text;
        _takeAttendenceAttendenceViewController.topicTaught = _topicInputField.text;
-       _takeAttendenceAttendenceViewController.attendenceDate = [[NSString stringWithFormat:@"%@",[_datePickerInput date]] substringToIndex:10];
+       
+       NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+       [dateFormatter setDateFormat:@"YYYY/MM/dd"];
+       NSString *dateString = [dateFormatter stringFromDate:_datePickerInput.date];
+       
+       _takeAttendenceAttendenceViewController.attendenceDate = dateString;
 
    }
 }
@@ -72,7 +81,12 @@
 
 - (IBAction)createAttendanceSheetButtonAction:(id)sender {
     
-    NSLog(@"Date is: %@", [[NSString stringWithFormat:@"%@",[_datePickerInput date]] substringToIndex:10]);
+//    Important For date formatting.
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY/MM/dd"];
+    NSString *dateString = [dateFormatter stringFromDate:_datePickerInput.date];
+    
+    NSLog(@"Date is: %@", dateString);
     
     if(_studentClassInputField.text.length == 0 || _topicInputField.text.length == 0){
         
@@ -85,7 +99,7 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }
-    else if ([AttendenceRecord doesAttendenceExistsForDate:[[NSString stringWithFormat:@"%@",[_datePickerInput date]] substringToIndex:10] class:_studentClassInputField.text]){
+    else if ([AttendenceRecord doesAttendenceExistsForDate:dateString class:_studentClassInputField.text]){
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Attendence already exists for given class and date." preferredStyle:UIAlertControllerStyleAlert];
 

@@ -59,7 +59,7 @@
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
     NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND date == %@", studentClass, date];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass LIKE %@ AND date LIKE %@", studentClass, date];
     
     NSSortDescriptor *sortByRollNo = [[NSSortDescriptor alloc] initWithKey:@"rollNo" ascending:YES];
     fetchRequest.sortDescriptors = @[sortByRollNo];
@@ -93,7 +93,7 @@
     NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
     
     NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass == %@ AND rollNo LIKE %@", studentClass, rollNo];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass LIKE %@ AND rollNo LIKE %@", studentClass, rollNo];
     
     NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     fetchRequest.sortDescriptors = @[sortByDate];
@@ -119,6 +119,40 @@
     NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
     
     return retrievedData;
+}
+
++ (void)updateDataForData:(NSArray *)data newAttendence:(NSArray *) newAttendenceData {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appdelegate.persistentContainer.viewContext;
+    
+    int i=0;
+    
+    NSFetchRequest *fetchRequest = [AttendenceRecord fetchRequest];
+    
+    for (AttendenceRecord *currentAttendence in data){
+        
+        fetchRequest.predicate = [NSPredicate predicateWithFormat: @"studentClass LIKE %@ AND rollNo == %i AND date LIKE %@", currentAttendence.studentClass, currentAttendence.rollNo, currentAttendence.date];
+        
+        NSError *error;
+        NSArray *retrievedData = [context executeFetchRequest: fetchRequest error: &error];
+        
+        AttendenceRecord *recievedObject = [retrievedData objectAtIndex:0];
+        
+        NSString *currentnewAttendence = [newAttendenceData objectAtIndex:i];
+        
+        if ([currentnewAttendence isEqualToString:@"0"]){
+            recievedObject.attendence = @"Absent";
+        }
+        else{
+            recievedObject.attendence = @"Present";
+        }
+        
+        [appdelegate saveContext];
+        
+        i++;
+    }
+    
 }
 
 @end

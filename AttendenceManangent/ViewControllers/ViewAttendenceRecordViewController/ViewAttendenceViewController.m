@@ -57,8 +57,13 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
     else{
-        NSString *chosenDate = [NSString stringWithFormat:@"%@", [_dateInput date]];
-        _fetchedRecord = [AttendenceRecord fetchAttendenceRecordForClass:_classInputField.text date:[chosenDate substringToIndex:10]];
+//        NSString *chosenDate = [NSString stringWithFormat:@"%@", [_dateInput date]];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"YYYY/MM/dd"];
+        NSString *dateString = [dateFormatter stringFromDate:_dateInput.date];
+
+        _fetchedRecord = [AttendenceRecord fetchAttendenceRecordForClass:_classInputField.text date:dateString];
         
         if(_fetchedRecord.count == 0){
             _dataFoundStatusLabel.text = @"No data found.";
