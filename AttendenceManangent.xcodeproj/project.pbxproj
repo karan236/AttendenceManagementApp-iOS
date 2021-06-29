@@ -22,6 +22,21 @@
 		12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 12936C1F268624B30030B884 /* AttendenceRecord+CoreDataClass.m */; };
 		12936C22268624B30030B884 /* AttendenceRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12936C20268624B30030B884 /* AttendenceRecord+CoreDataProperties.m */; };
 		12936C3226864F640030B884 /* ViewAttendenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12936C3126864F640030B884 /* ViewAttendenceViewController.m */; };
+		129B8DBA268AF80400EDF0D2 /* StudentTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129B8DB9268AF80400EDF0D2 /* StudentTabViewController.m */; };
+		129B8DC0268AF86F00EDF0D2 /* TopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129B8DBF268AF86F00EDF0D2 /* TopicsViewController.m */; };
+		129B8DC6268AFA2B00EDF0D2 /* AttendeceTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129B8DC5268AFA2B00EDF0D2 /* AttendeceTabViewController.m */; };
+		12B79815268B201800230274 /* StudentList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79813268B201800230274 /* StudentList.storyboard */; };
+		12B7981D268B21CD00230274 /* DeleteStudent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7981C268B21CD00230274 /* DeleteStudent.storyboard */; };
+		12B79823268B225500230274 /* AddStudent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79821268B225500230274 /* AddStudent.storyboard */; };
+		12B79830268B267800230274 /* TakeAttendence.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7982F268B267800230274 /* TakeAttendence.storyboard */; };
+		12B79836268B278500230274 /* ViewAttendenceRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79834268B278500230274 /* ViewAttendenceRecord.storyboard */; };
+		12B7983B268B27DF00230274 /* AttendenceRecordOfAStudent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7983A268B27DF00230274 /* AttendenceRecordOfAStudent.storyboard */; };
+		12B79840268B28D000230274 /* EditAttendence.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7983F268B28D000230274 /* EditAttendence.storyboard */; };
+		12B79846268B29B700230274 /* TopicsTaught.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79844268B29B700230274 /* TopicsTaught.storyboard */; };
+		12B7984B268B2A0200230274 /* TopicsMissedByStudents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7984A268B2A0200230274 /* TopicsMissedByStudents.storyboard */; };
+		12B79850268B2A5F00230274 /* TopicsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7984F268B2A5F00230274 /* TopicsTab.storyboard */; };
+		12B79855268B2B0900230274 /* AttendenceTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79854268B2B0900230274 /* AttendenceTab.storyboard */; };
+		12B7985A268B2BE600230274 /* StudentTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B79859268B2BE600230274 /* StudentTab.storyboard */; };
 		12CB849B2683087800A2394D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB849A2683087800A2394D /* AppDelegate.m */; };
 		12CB849E2683087800A2394D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB849D2683087800A2394D /* SceneDelegate.m */; };
 		12CB84A12683087800A2394D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CB84A02683087800A2394D /* ViewController.m */; };
@@ -82,6 +97,24 @@
 		12936C20268624B30030B884 /* AttendenceRecord+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AttendenceRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		12936C3026864F640030B884 /* ViewAttendenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAttendenceViewController.h; sourceTree = "<group>"; };
 		12936C3126864F640030B884 /* ViewAttendenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAttendenceViewController.m; sourceTree = "<group>"; };
+		129B8DB8268AF80400EDF0D2 /* StudentTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentTabViewController.h; sourceTree = "<group>"; };
+		129B8DB9268AF80400EDF0D2 /* StudentTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentTabViewController.m; sourceTree = "<group>"; };
+		129B8DBE268AF86F00EDF0D2 /* TopicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicsViewController.h; sourceTree = "<group>"; };
+		129B8DBF268AF86F00EDF0D2 /* TopicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicsViewController.m; sourceTree = "<group>"; };
+		129B8DC4268AFA2B00EDF0D2 /* AttendeceTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttendeceTabViewController.h; sourceTree = "<group>"; };
+		129B8DC5268AFA2B00EDF0D2 /* AttendeceTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendeceTabViewController.m; sourceTree = "<group>"; };
+		12B79814268B201800230274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AttendenceManangent/Base.lproj/StudentList.storyboard; sourceTree = "<group>"; };
+		12B7981C268B21CD00230274 /* DeleteStudent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeleteStudent.storyboard; sourceTree = "<group>"; };
+		12B79822268B225500230274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AttendenceManangent/Base.lproj/AddStudent.storyboard; sourceTree = "<group>"; };
+		12B7982F268B267800230274 /* TakeAttendence.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakeAttendence.storyboard; sourceTree = "<group>"; };
+		12B79835268B278500230274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AttendenceManangent/Base.lproj/ViewAttendenceRecord.storyboard; sourceTree = "<group>"; };
+		12B7983A268B27DF00230274 /* AttendenceRecordOfAStudent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AttendenceRecordOfAStudent.storyboard; sourceTree = "<group>"; };
+		12B7983F268B28D000230274 /* EditAttendence.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditAttendence.storyboard; sourceTree = "<group>"; };
+		12B79845268B29B700230274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AttendenceManangent/Base.lproj/TopicsTaught.storyboard; sourceTree = "<group>"; };
+		12B7984A268B2A0200230274 /* TopicsMissedByStudents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopicsMissedByStudents.storyboard; sourceTree = "<group>"; };
+		12B7984F268B2A5F00230274 /* TopicsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopicsTab.storyboard; sourceTree = "<group>"; };
+		12B79854268B2B0900230274 /* AttendenceTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AttendenceTab.storyboard; sourceTree = "<group>"; };
+		12B79859268B2BE600230274 /* StudentTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentTab.storyboard; sourceTree = "<group>"; };
 		12CB84962683087800A2394D /* AttendenceManangent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceManangent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CB84992683087800A2394D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		12CB849A2683087800A2394D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -248,6 +281,53 @@
 			path = ViewAttendenceRecordViewController;
 			sourceTree = "<group>";
 		};
+		129B8DCA268B1ACE00EDF0D2 /* AttendenceTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				129B8DC4268AFA2B00EDF0D2 /* AttendeceTabViewController.h */,
+				129B8DC5268AFA2B00EDF0D2 /* AttendeceTabViewController.m */,
+			);
+			path = AttendenceTabViewController;
+			sourceTree = "<group>";
+		};
+		129B8DCB268B1AEA00EDF0D2 /* TopicsTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				129B8DBF268AF86F00EDF0D2 /* TopicsViewController.m */,
+				129B8DBE268AF86F00EDF0D2 /* TopicsViewController.h */,
+			);
+			path = TopicsTabViewController;
+			sourceTree = "<group>";
+		};
+		129B8DCC268B1B1300EDF0D2 /* StudentTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				129B8DB9268AF80400EDF0D2 /* StudentTabViewController.m */,
+				129B8DB8268AF80400EDF0D2 /* StudentTabViewController.h */,
+			);
+			path = StudentTabViewController;
+			sourceTree = "<group>";
+		};
+		12B7985E268B2F5900230274 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				12CB84A22683087800A2394D /* Main.storyboard */,
+				12B79854268B2B0900230274 /* AttendenceTab.storyboard */,
+				12B79859268B2BE600230274 /* StudentTab.storyboard */,
+				12B7984F268B2A5F00230274 /* TopicsTab.storyboard */,
+				12B7982F268B267800230274 /* TakeAttendence.storyboard */,
+				12B79834268B278500230274 /* ViewAttendenceRecord.storyboard */,
+				12B7983A268B27DF00230274 /* AttendenceRecordOfAStudent.storyboard */,
+				12B7983F268B28D000230274 /* EditAttendence.storyboard */,
+				12B79813268B201800230274 /* StudentList.storyboard */,
+				12B7981C268B21CD00230274 /* DeleteStudent.storyboard */,
+				12B79821268B225500230274 /* AddStudent.storyboard */,
+				12B79844268B29B700230274 /* TopicsTaught.storyboard */,
+				12B7984A268B2A0200230274 /* TopicsMissedByStudents.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		12CB848D2683087800A2394D = {
 			isa = PBXGroup;
 			children = (
@@ -271,13 +351,13 @@
 		12CB84982683087800A2394D /* AttendenceManangent */ = {
 			isa = PBXGroup;
 			children = (
+				12B7985E268B2F5900230274 /* StoryBoards */,
 				12CB84E926839CCE00A2394D /* ViewControllers */,
 				12CB84DD26839C4300A2394D /* Models */,
 				12CB84992683087800A2394D /* AppDelegate.h */,
 				12CB849A2683087800A2394D /* AppDelegate.m */,
 				12CB849C2683087800A2394D /* SceneDelegate.h */,
 				12CB849D2683087800A2394D /* SceneDelegate.m */,
-				12CB84A22683087800A2394D /* Main.storyboard */,
 				127602DE2684AD6000A666A4 /* AttendenceManangent.xcdatamodeld */,
 				12CB84A82683087900A2394D /* Assets.xcassets */,
 				12CB84AA2683087900A2394D /* LaunchScreen.storyboard */,
@@ -339,6 +419,9 @@
 		12CB84E926839CCE00A2394D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				129B8DCC268B1B1300EDF0D2 /* StudentTabViewController */,
+				129B8DCB268B1AEA00EDF0D2 /* TopicsTabViewController */,
+				129B8DCA268B1ACE00EDF0D2 /* AttendenceTabViewController */,
 				12DFED27268A3FB000B4CF0B /* DeleteStudentViewController */,
 				1282F0D92688FE9900E2DCEC /* EditAttendenceViewController */,
 				123A1C48268871F700861BBE /* TopicsMissedByStudentViewController */,
@@ -475,9 +558,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B7984B268B2A0200230274 /* TopicsMissedByStudents.storyboard in Resources */,
+				12B79855268B2B0900230274 /* AttendenceTab.storyboard in Resources */,
+				12B7983B268B27DF00230274 /* AttendenceRecordOfAStudent.storyboard in Resources */,
+				12B79850268B2A5F00230274 /* TopicsTab.storyboard in Resources */,
+				12B7981D268B21CD00230274 /* DeleteStudent.storyboard in Resources */,
 				12CB84AC2683087900A2394D /* LaunchScreen.storyboard in Resources */,
+				12B79823268B225500230274 /* AddStudent.storyboard in Resources */,
+				12B7985A268B2BE600230274 /* StudentTab.storyboard in Resources */,
+				12B79846268B29B700230274 /* TopicsTaught.storyboard in Resources */,
+				12B79836268B278500230274 /* ViewAttendenceRecord.storyboard in Resources */,
+				12B79840268B28D000230274 /* EditAttendence.storyboard in Resources */,
 				12CB84A92683087900A2394D /* Assets.xcassets in Resources */,
 				12CB84A42683087800A2394D /* Main.storyboard in Resources */,
+				12B79830268B267800230274 /* TakeAttendence.storyboard in Resources */,
+				12B79815268B201800230274 /* StudentList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,10 +599,12 @@
 			files = (
 				127602E62684B12000A666A4 /* AttendenceManangent.xcdatamodeld in Sources */,
 				12DFED2A268A400100B4CF0B /* DeleteStudentViewController.m in Sources */,
+				129B8DC6268AFA2B00EDF0D2 /* AttendeceTabViewController.m in Sources */,
 				1254F5572687475C0093E988 /* TopicsTaughtViewController.m in Sources */,
 				124A059E268518E900FB151C /* TakeAttendenceDetailsViewController.m in Sources */,
 				12936C21268624B30030B884 /* AttendenceRecord+CoreDataClass.m in Sources */,
 				12CB84AF2683087900A2394D /* main.m in Sources */,
+				129B8DBA268AF80400EDF0D2 /* StudentTabViewController.m in Sources */,
 				1282F0E52688FF1F00E2DCEC /* EditAttendenceViewController.m in Sources */,
 				127602BE2684AB0100A666A4 /* Students+CoreDataClass.m in Sources */,
 				12CB84A12683087800A2394D /* ViewController.m in Sources */,
@@ -522,6 +619,7 @@
 				12936C3226864F640030B884 /* ViewAttendenceViewController.m in Sources */,
 				12936C22268624B30030B884 /* AttendenceRecord+CoreDataProperties.m in Sources */,
 				1285270E26851C75008CE6AB /* TakeAttendenceAttendenceViewController.m in Sources */,
+				129B8DC0268AF86F00EDF0D2 /* TopicsViewController.m in Sources */,
 				127602EC2684E1DF00A666A4 /* StudentListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +656,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		12B79813268B201800230274 /* StudentList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B79814268B201800230274 /* Base */,
+			);
+			name = StudentList.storyboard;
+			sourceTree = "<group>";
+		};
+		12B79821268B225500230274 /* AddStudent.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B79822268B225500230274 /* Base */,
+			);
+			name = AddStudent.storyboard;
+			sourceTree = "<group>";
+		};
+		12B79834268B278500230274 /* ViewAttendenceRecord.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B79835268B278500230274 /* Base */,
+			);
+			name = ViewAttendenceRecord.storyboard;
+			sourceTree = "<group>";
+		};
+		12B79844268B29B700230274 /* TopicsTaught.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B79845268B29B700230274 /* Base */,
+			);
+			name = TopicsTaught.storyboard;
+			sourceTree = "<group>";
+		};
 		12CB84A22683087800A2394D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

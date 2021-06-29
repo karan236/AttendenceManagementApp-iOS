@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3A1-u3-DwH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Topics View Controller-->
+        <scene sceneID="Bj7-wU-prT">
+            <objects>
+                <viewController id="PqK-mD-Uyu" customClass="TopicsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esz-l6-f5w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yqy-aL-svs">
+                                <rect key="frame" x="12" y="44" width="390" height="757"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendence Management" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-c0-7Qg">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="84"/>
+                                        <color key="textColor" red="0.58389479960000001" green="0.44199938350000001" blue="0.87100571410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="U0G-1K-s6W">
+                                        <rect key="frame" x="0.0" y="210.5" width="390" height="546.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-Fi-9tu">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="266"/>
+                                                <color key="backgroundColor" red="1" green="0.50487195250000005" blue="0.44621640600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="Topics Taught">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="ZNJ-gR-4bV" kind="show" id="wqu-mm-2Az"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-Iq-fQT">
+                                                <rect key="frame" x="0.0" y="281" width="390" height="265.5"/>
+                                                <color key="backgroundColor" red="0.91763909040000002" green="0.5826781539" blue="0.38397644860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="Topics Missed by Student">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="47"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="Wom-ab-dJ1" kind="show" id="PDR-i7-JFW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JTl-4L-35h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JTl-4L-35h" firstAttribute="trailing" secondItem="yqy-aL-svs" secondAttribute="trailing" constant="12" id="0nq-Qb-fRZ"/>
+                            <constraint firstItem="yqy-aL-svs" firstAttribute="top" secondItem="JTl-4L-35h" secondAttribute="top" id="UfX-cN-i0Z"/>
+                            <constraint firstItem="yqy-aL-svs" firstAttribute="leading" secondItem="JTl-4L-35h" secondAttribute="leading" constant="12" id="eVR-fs-GUL"/>
+                            <constraint firstItem="JTl-4L-35h" firstAttribute="bottom" secondItem="yqy-aL-svs" secondAttribute="bottom" constant="12" id="ptm-RO-iBQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ycF-7X-pS2"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="topicsMissedByStudentsButton" destination="hvo-Iq-fQT" id="xUY-qz-Arl"/>
+                        <outlet property="topicsTaughtButton" destination="aR0-Fi-9tu" id="Xqb-gV-zUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYI-2w-dgH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7550.7246376811599" y="-1402.2321428571429"/>
+        </scene>
+        <!--Topics-->
+        <scene sceneID="ogm-vi-BBr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3A1-u3-DwH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Topics" image="book.fill" catalog="system" id="Ze6-Nr-svo"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aRb-Ve-A5b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PqK-mD-Uyu" kind="relationship" relationship="rootViewController" id="zXC-M6-rYP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Lb-ag-AjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6650.7246376811599" y="-1402.2321428571429"/>
+        </scene>
+        <!--TopicsTaught-->
+        <scene sceneID="wYa-N2-imY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TopicsTaught" id="ZNJ-gR-4bV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cs7-An-2B7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsz-J8-QEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8150" y="-1645"/>
+        </scene>
+        <!--TopicsMissedByStudents-->
+        <scene sceneID="IeK-WD-kHf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TopicsMissedByStudents" id="Wom-ab-dJ1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="z0W-8H-Ple"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPX-Xk-Ukm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8202" y="-1173"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

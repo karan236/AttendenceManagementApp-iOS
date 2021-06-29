@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7vv-bY-gux">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TakeAttendence-->
+        <scene sceneID="WD3-rE-DTV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TakeAttendence" id="95A-lk-ZXh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="r7D-AM-CxT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zn3-La-ZtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4057" y="-653"/>
+        </scene>
+        <!--Attendece Tab View Controller-->
+        <scene sceneID="MSO-dY-3ae">
+            <objects>
+                <viewController id="nXk-pW-eea" customClass="AttendeceTabViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3au-Lg-SQD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="XQV-4e-Tpv">
+                                <rect key="frame" x="12" y="44" width="390" height="757"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendence Management" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="MaQ-DX-ja1">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="146"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="84"/>
+                                        <color key="textColor" red="0.58389479960000001" green="0.44199938350000001" blue="0.87100571410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-p5-RyT">
+                                        <rect key="frame" x="0.0" y="153" width="390" height="145.5"/>
+                                        <color key="backgroundColor" red="1" green="0.68944836519999997" blue="0.23454418490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Take Attendence">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="95A-lk-ZXh" kind="show" id="DUC-Ec-fpW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XB3-xj-mcU">
+                                        <rect key="frame" x="0.0" y="305.5" width="390" height="146"/>
+                                        <color key="backgroundColor" red="1" green="0.509075842" blue="0.91253846080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="View Attendence Record">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="6Ok-kp-Wa0" kind="show" id="lf1-77-rsm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5xg-Xy-ydt">
+                                        <rect key="frame" x="0.0" y="458.5" width="390" height="145.5"/>
+                                        <color key="backgroundColor" red="0.42535908630000002" green="0.43560701029999999" blue="0.91763909040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Attendence Record of a Student">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="44"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="J1v-yr-dgQ" kind="show" id="GRx-Nd-AUE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7dl-bE-hhU">
+                                        <rect key="frame" x="0.0" y="611" width="390" height="146"/>
+                                        <color key="backgroundColor" red="0.60256653159999995" green="0.36726073590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Edit Attendence">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="53"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="wJn-p4-gY7" kind="show" id="Xrg-aE-NxR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3NR-Wz-wxd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XQV-4e-Tpv" firstAttribute="top" secondItem="3NR-Wz-wxd" secondAttribute="top" id="0Hb-Dn-Xlj"/>
+                            <constraint firstItem="3NR-Wz-wxd" firstAttribute="bottom" secondItem="XQV-4e-Tpv" secondAttribute="bottom" constant="12" id="3CH-x9-YIw"/>
+                            <constraint firstItem="3NR-Wz-wxd" firstAttribute="trailing" secondItem="XQV-4e-Tpv" secondAttribute="trailing" constant="12" id="6Ss-L6-ba9"/>
+                            <constraint firstItem="XQV-4e-Tpv" firstAttribute="leading" secondItem="3NR-Wz-wxd" secondAttribute="leading" constant="12" id="OTZ-Ew-NrK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T4U-yf-ec8"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="attendenceRecordOfAStudentButton" destination="5xg-Xy-ydt" id="Kkt-uy-JE2"/>
+                        <outlet property="editAttendenceButton" destination="7dl-bE-hhU" id="GXM-oQ-Y8l"/>
+                        <outlet property="takeAttendenceButton" destination="7Gi-p5-RyT" id="OxK-kr-Ibg"/>
+                        <outlet property="viewAttendenceRecordButton" destination="XB3-xj-mcU" id="V7t-R7-OEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qML-lD-gKn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4700" y="-1119.6428571428571"/>
+        </scene>
+        <!--ViewAttendenceRecord-->
+        <scene sceneID="HeA-68-gCQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ViewAttendenceRecord" id="6Ok-kp-Wa0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GmC-TN-K1G"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e36-6K-dth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4452" y="-653"/>
+        </scene>
+        <!--AttendenceRecordOfAStudent-->
+        <scene sceneID="PmB-ww-S4G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AttendenceRecordOfAStudent" id="J1v-yr-dgQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PAB-aD-FWg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcg-Xo-SMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4784" y="-653"/>
+        </scene>
+        <!--EditAttendence-->
+        <scene sceneID="9NE-5k-ROA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditAttendence" id="wJn-p4-gY7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="giw-2N-XDk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lt-X6-yhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5190" y="-653"/>
+        </scene>
+        <!--Attendence-->
+        <scene sceneID="mSa-oH-Q1k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7vv-bY-gux" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Attendence" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="VdH-5v-BjL"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LOF-gA-1O6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nXk-pW-eea" kind="relationship" relationship="rootViewController" id="EJE-bt-Elh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yU2-KD-bDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3789.8550724637685" y="-1119.6428571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

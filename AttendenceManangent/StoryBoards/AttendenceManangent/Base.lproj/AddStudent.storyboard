@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0XN-X3-lzO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Student-->
+        <scene sceneID="lQG-RL-SzU">
+            <objects>
+                <viewController id="0XN-X3-lzO" customClass="AddStudentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z9G-QX-Zsa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Roll Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-YH-t7v">
+                                <rect key="frame" x="10" y="232.33333333333334" width="394" height="34.000000000000028"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwy-5C-G9g">
+                                <rect key="frame" x="10" y="276.33333333333331" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnd-yS-cbM">
+                                <rect key="frame" x="10" y="188.33333333333334" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Student" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-uE-HXm">
+                                <rect key="frame" x="10" y="49" width="394" height="134.33333333333334"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="76"/>
+                                <color key="textColor" red="0.4689792387487941" green="0.69133889874719268" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucr-r2-vgS">
+                                <rect key="frame" x="281.33333333333331" y="330.33333333333331" width="82.666666666666686" height="45"/>
+                                <color key="backgroundColor" red="0.73459648840206193" green="0.11881105509224336" blue="0.12654001131732162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="0XN-X3-lzO" eventType="touchUpInside" id="aya-9r-ZeE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVl-aJ-rbJ">
+                                <rect key="frame" x="50.000000000000007" y="330.33333333333331" width="82.666666666666686" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="0XN-X3-lzO" eventType="touchUpInside" id="1gh-SA-6G7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Fb-SA-Kzh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jSy-uE-HXm" firstAttribute="top" secondItem="0Fb-SA-Kzh" secondAttribute="top" constant="5" id="15U-eI-1Li"/>
+                            <constraint firstItem="0Fb-SA-Kzh" firstAttribute="trailing" secondItem="jSy-uE-HXm" secondAttribute="trailing" constant="10" id="87O-Uq-wi6"/>
+                            <constraint firstItem="EVl-aJ-rbJ" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.05" id="9RX-VU-Hu2"/>
+                            <constraint firstItem="wnd-yS-cbM" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.0379464" id="CX5-jh-Gr2"/>
+                            <constraint firstItem="wnd-yS-cbM" firstAttribute="top" secondItem="jSy-uE-HXm" secondAttribute="bottom" constant="5" id="DNn-BX-xNq"/>
+                            <constraint firstItem="iwy-5C-G9g" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.0379464" id="EIt-h8-PS0"/>
+                            <constraint firstItem="EVl-aJ-rbJ" firstAttribute="width" secondItem="z9G-QX-Zsa" secondAttribute="width" multiplier="0.2" id="JIf-TX-13u"/>
+                            <constraint firstItem="Ucr-r2-vgS" firstAttribute="top" secondItem="iwy-5C-G9g" secondAttribute="bottom" constant="20" id="LKY-Tq-ykf"/>
+                            <constraint firstItem="EVl-aJ-rbJ" firstAttribute="top" secondItem="iwy-5C-G9g" secondAttribute="bottom" constant="20" id="LyX-x1-kzp"/>
+                            <constraint firstItem="iwy-5C-G9g" firstAttribute="top" secondItem="vMN-YH-t7v" secondAttribute="bottom" constant="10" id="Nsx-nt-Qmu"/>
+                            <constraint firstItem="jSy-uE-HXm" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.15" id="QSo-lW-aK5"/>
+                            <constraint firstItem="0Fb-SA-Kzh" firstAttribute="trailing" secondItem="vMN-YH-t7v" secondAttribute="trailing" constant="10" id="YdU-CL-q7c"/>
+                            <constraint firstItem="Ucr-r2-vgS" firstAttribute="top" secondItem="iwy-5C-G9g" secondAttribute="bottom" constant="20" id="aTT-pn-m3o"/>
+                            <constraint firstItem="iwy-5C-G9g" firstAttribute="leading" secondItem="0Fb-SA-Kzh" secondAttribute="leading" constant="10" id="d3N-Dj-Ops"/>
+                            <constraint firstItem="Ucr-r2-vgS" firstAttribute="width" secondItem="z9G-QX-Zsa" secondAttribute="width" multiplier="0.2" id="eNb-x4-D5a"/>
+                            <constraint firstItem="jSy-uE-HXm" firstAttribute="leading" secondItem="0Fb-SA-Kzh" secondAttribute="leading" constant="10" id="ePW-oB-nhD"/>
+                            <constraint firstItem="0Fb-SA-Kzh" firstAttribute="trailing" secondItem="iwy-5C-G9g" secondAttribute="trailing" constant="10" id="fYY-st-OIz"/>
+                            <constraint firstItem="0Fb-SA-Kzh" firstAttribute="trailing" secondItem="wnd-yS-cbM" secondAttribute="trailing" constant="10" id="mmP-5G-6qS"/>
+                            <constraint firstItem="EVl-aJ-rbJ" firstAttribute="leading" secondItem="0Fb-SA-Kzh" secondAttribute="leading" constant="50" id="mob-Zg-cOM"/>
+                            <constraint firstItem="vMN-YH-t7v" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.0379464" id="nep-Mp-mj0"/>
+                            <constraint firstItem="Ucr-r2-vgS" firstAttribute="height" secondItem="z9G-QX-Zsa" secondAttribute="height" multiplier="0.05" id="pRo-sL-it9"/>
+                            <constraint firstItem="0Fb-SA-Kzh" firstAttribute="trailing" secondItem="Ucr-r2-vgS" secondAttribute="trailing" constant="50" id="teY-8I-vZ5"/>
+                            <constraint firstItem="vMN-YH-t7v" firstAttribute="leading" secondItem="0Fb-SA-Kzh" secondAttribute="leading" constant="10" id="wjx-3y-Ax4"/>
+                            <constraint firstItem="wnd-yS-cbM" firstAttribute="leading" secondItem="0Fb-SA-Kzh" secondAttribute="leading" constant="10" id="xiu-vN-Uws"/>
+                            <constraint firstItem="vMN-YH-t7v" firstAttribute="top" secondItem="wnd-yS-cbM" secondAttribute="bottom" constant="10" id="yT2-Sh-0ng"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Student" leftItemsSupplementBackButton="YES" id="fMN-rt-Xqf">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="62e-AO-DsQ"/>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="classInputField" destination="wnd-yS-cbM" id="W1B-q2-91y"/>
+                        <outlet property="nameInputField" destination="iwy-5C-G9g" id="ay6-Xg-ZQJ"/>
+                        <outlet property="rollNoInputField" destination="vMN-YH-t7v" id="LVD-qC-cVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3e-sn-yPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3897" y="-1369"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

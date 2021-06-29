@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nEd-jT-yTt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="Pjr-lU-2I3">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-lKG-1t-zEL" id="plm-NM-jOl" customClass="StudentTabViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0p-df-I4d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YaO-Kb-Nz7">
+                                <rect key="frame" x="12" y="44" width="390" height="757"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendence Management" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="D6H-Ie-dNG">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="182"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="84"/>
+                                        <color key="textColor" red="0.58389479960000001" green="0.44199938350000001" blue="0.87100571410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9v7-WD-qAP">
+                                        <rect key="frame" x="0.0" y="192" width="390" height="181.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-bN-dsC">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="181.5"/>
+                                                <color key="backgroundColor" red="0.69526473479999995" green="0.56487448890000003" blue="0.19872023359999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="Students List">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="I5Y-81-AQf" kind="show" id="mGS-cs-MEZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="W6U-WS-GZb">
+                                        <rect key="frame" x="0.0" y="383.5" width="390" height="182"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-t9-2W7">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="182"/>
+                                                <color key="backgroundColor" red="1" green="0.36591310929999998" blue="0.38523688109999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="Delete Student">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="goj-Q8-4zW" kind="show" id="4rh-6k-b3Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQb-VL-Y96">
+                                        <rect key="frame" x="0.0" y="575.5" width="390" height="181.5"/>
+                                        <color key="backgroundColor" red="0.44304325090000002" green="0.65810164699999996" blue="0.96462226159999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Add Student">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="vES-Os-ULq" kind="show" id="fFB-3W-U4K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OZI-Fu-AfE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YaO-Kb-Nz7" firstAttribute="top" secondItem="OZI-Fu-AfE" secondAttribute="top" id="0Bf-vX-QIT"/>
+                            <constraint firstItem="OZI-Fu-AfE" firstAttribute="bottom" secondItem="YaO-Kb-Nz7" secondAttribute="bottom" constant="12" id="7bB-EH-mnl"/>
+                            <constraint firstItem="OZI-Fu-AfE" firstAttribute="trailing" secondItem="YaO-Kb-Nz7" secondAttribute="trailing" constant="12" id="G1U-KD-uus"/>
+                            <constraint firstItem="YaO-Kb-Nz7" firstAttribute="leading" secondItem="OZI-Fu-AfE" secondAttribute="leading" constant="12" id="w5P-uz-aGE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="18W-kj-IVV"/>
+                    <navigationItem key="navigationItem" id="Yy0-Eb-fpN"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="addStudentButton" destination="TQb-VL-Y96" id="FHQ-ru-QIK"/>
+                        <outlet property="deleteStudentButton" destination="ndR-t9-2W7" id="mVE-5p-OlK"/>
+                        <outlet property="studentsListButton" destination="Gdo-bN-dsC" id="RbX-n4-J3R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6X-g7-xQ7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5741" y="-666"/>
+        </scene>
+        <!--DeleteStudent-->
+        <scene sceneID="9b1-Ve-SkL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DeleteStudent" id="goj-Q8-4zW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="j2H-T8-yDU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVV-0e-lo9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6626" y="-666"/>
+        </scene>
+        <!--AddStudent-->
+        <scene sceneID="weI-YG-0S2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddStudent" id="vES-Os-ULq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rUw-mb-9OR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOK-gY-IAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6637" y="-550"/>
+        </scene>
+        <!--Students-->
+        <scene sceneID="CTq-ev-OjJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nEd-jT-yTt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Students" image="person.fill" catalog="system" id="Q44-9u-1MN"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zUQ-H2-0Ma">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="plm-NM-jOl" kind="relationship" relationship="rootViewController" id="7oY-H3-6MT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6st-3m-bo5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4748" y="-666"/>
+        </scene>
+        <!--StudentList-->
+        <scene sceneID="Gbp-ig-An6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StudentList" id="I5Y-81-AQf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SIO-Fi-Yrj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZ0-bF-nDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6614" y="-811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
