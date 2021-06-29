@@ -40,7 +40,7 @@
 }
 
 
--(void)popAddStudentViewController{
+- (void)popAddStudentViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -53,23 +53,27 @@
     return _studentClasses.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_studentClasses objectAtIndex: row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _classInputField.text = [_studentClasses objectAtIndex:row];
     [_classInputField resignFirstResponder];
 }
+
+
 - (IBAction)resetButtonAction:(id)sender {
     _classInputField.text = @"";
     _rollNoInputField.text = @"";
     _nameInputField.text = @"";
 }
 
+
 - (IBAction)addButtonAction:(id)sender {
     
-    if (_classInputField.text.length == 0 || _rollNoInputField.text.length == 0 || _nameInputField.text.length == 0){
+    if (_classInputField.text.length == 0 || _rollNoInputField.text.length == 0 || _nameInputField.text.length == 0) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incomplete" message:@"Please enter all the details." preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *okActionButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
@@ -88,8 +92,8 @@
 
         [self presentViewController:alert animated:YES completion:nil];
     }
-    else{
-        if(![Students addStudentDetailsFromDictionary:@{@"rollNo":_rollNoInputField.text, @"name":_nameInputField.text, @"studentClass": _classInputField.text}]){
+    else {
+        if(![Students addStudentDetailsFromDictionary:@{@"rollNo":_rollNoInputField.text, @"name":_nameInputField.text, @"studentClass": _classInputField.text}]) {
             
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Entered details already exists" preferredStyle:UIAlertControllerStyleAlert];
 
@@ -100,7 +104,7 @@
             [self presentViewController:alert animated:YES completion:nil];
             
         }
-        else{
+        else {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Student added succesfully!" preferredStyle:UIAlertControllerStyleAlert];
 
             UIAlertAction *okActionButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
@@ -118,35 +122,36 @@
 
 }
 
--(BOOL)aretextFieldsInputValid{
+- (BOOL)aretextFieldsInputValid {
     NSSet *digitSet = [[NSSet alloc] initWithArray:@[@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"]];
     
     BOOL isEnteredRollNoValidInteger = YES;
     
-    for(int i = 0; i<[_rollNoInputField.text length]; i++){
-        if(![digitSet containsObject: [_rollNoInputField.text substringWithRange:NSMakeRange(i, 1)]]){
+    for(int i = 0; i<[_rollNoInputField.text length]; i++) {
+        if(![digitSet containsObject: [_rollNoInputField.text substringWithRange:NSMakeRange(i, 1)]]) {
             isEnteredRollNoValidInteger = NO;
             break;
         }
     }
     
-    if(!isEnteredRollNoValidInteger){
+    if(!isEnteredRollNoValidInteger) {
         return FALSE;
     }
 
     BOOL isEnteredNameValid = YES;
     
-    for(int i = 0; i<[_nameInputField.text length]; i++){
+    for(int i = 0; i<[_nameInputField.text length]; i++) {
         if([digitSet containsObject: [_nameInputField.text substringWithRange:NSMakeRange(i, 1)]]){
             isEnteredNameValid = NO;
             break;
         }
     }
     
-    if(!isEnteredNameValid){
+    if(!isEnteredNameValid) {
         return FALSE;
     }
     
     return TRUE;
 }
+
 @end

@@ -38,32 +38,40 @@
     _tableView.dataSource = self;
 }
 
-- (void)popTopicsTaughtViewController{
+
+- (void)popTopicsTaughtViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return _studentClasses.count;
 }
 
+
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_studentClasses objectAtIndex:row];
 }
+
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _studentClassInput.text = [_studentClasses objectAtIndex:row];
     [_studentClassInput resignFirstResponder];
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_fetchedDates count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TopicsTaughtTableCell"];
     
     UILabel *dateLabel = [cell viewWithTag:1];
@@ -81,6 +89,7 @@
     _fetchedDates = [[NSMutableArray alloc] init];
     
     if (_studentClassInput.text.length == 0) {
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No class chosen" message:@"Choose a class." preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *okActionButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
@@ -88,6 +97,7 @@
         [alert addAction:okActionButton];
 
         [self presentViewController:alert animated:YES completion:nil];
+        
     }
     else {
         _fetchedData = [AttendenceRecord fetchAttendenceRecordForClass:_studentClassInput.text];

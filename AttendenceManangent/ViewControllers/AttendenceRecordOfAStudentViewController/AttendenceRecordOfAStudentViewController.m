@@ -43,7 +43,7 @@
 
 
 
-- (void)popAttendenceRecordOfAStudentViewController{
+- (void)popAttendenceRecordOfAStudentViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -70,7 +70,8 @@
     return [_fetchedData count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttendenceRecordOfAStudentCell"];
     
     UILabel *dateLabel = [cell viewWithTag:1];
@@ -98,6 +99,7 @@
     _fetchedData = [[NSArray alloc] init];
     
     if (_studentClassInput.text.length == 0 || _rollNoInput.text.length == 0) {
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incomplete Data" message:@"Please fill both student's class and roll no." preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *okActionButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
@@ -105,6 +107,7 @@
         [alert addAction:okActionButton];
 
         [self presentViewController:alert animated:YES completion:nil];
+        
     }
     else {
         _fetchedData = [AttendenceRecord fetchAttendenceRecordForClass:_studentClassInput.text rollNo:_rollNoInput.text];
@@ -116,6 +119,7 @@
             _statusLabel.text = [NSString stringWithFormat:@"Class %@", _studentClassInput.text];
         }
     }
+    
     [_tableView reloadData];
 }
 

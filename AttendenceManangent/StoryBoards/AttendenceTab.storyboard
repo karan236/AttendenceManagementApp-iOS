@@ -160,7 +160,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-6K-dth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4452" y="-653"/>
+            <point key="canvasLocation" x="4487" y="-654"/>
         </scene>
         <!--AttendenceRecordOfAStudent-->
         <scene sceneID="PmB-ww-S4G">
@@ -170,7 +170,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcg-Xo-SMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4784" y="-653"/>
+            <point key="canvasLocation" x="4933" y="-654"/>
         </scene>
         <!--EditAttendence-->
         <scene sceneID="9NE-5k-ROA">
@@ -180,7 +180,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lt-X6-yhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5190" y="-653"/>
+            <point key="canvasLocation" x="5359" y="-654"/>
         </scene>
         <!--Attendence-->
         <scene sceneID="mSa-oH-Q1k">

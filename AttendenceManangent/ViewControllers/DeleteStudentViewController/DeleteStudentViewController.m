@@ -25,8 +25,10 @@
     _studentClasses = @[@"Nursery", @"Kindergarten", @"I", @"II", @"III", @"IV", @"V", @"VI", @"VII", @"VIII", @"IX", @"X", @"XI", @"XII"];
     
     UIPickerView *pickerView = [[UIPickerView alloc] init];
+    
     pickerView.delegate = self;
     pickerView.dataSource = self;
+    
     _classInputField.inputView = pickerView;
     
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popDeleteStudentViewController)];
@@ -42,12 +44,12 @@
     _removedObjectSet = [[NSMutableSet alloc] init];
 }
 
-- (void)popDeleteStudentViewController{
+- (void)popDeleteStudentViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
--(NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
+- (NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
    return 1;
 }
 
@@ -55,28 +57,28 @@
    return _studentClasses.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
    return [_studentClasses objectAtIndex: row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
    _classInputField.text = [_studentClasses objectAtIndex:row];
    [_classInputField resignFirstResponder];
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_fetchedData count] - [_removedObjectSet count];
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DeleteStudentTableViewCell *cell = (DeleteStudentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeleteStudentCell"];
     
     int i = (int)indexPath.row;
     
-    while([_removedObjectSet containsObject:[_fetchedData objectAtIndex: indexPath.row]]){
+    while ([_removedObjectSet containsObject:[_fetchedData objectAtIndex: indexPath.row]]) {
         i++;
     }
     
@@ -93,7 +95,7 @@
             
             [Students deleteStudentForClass:self->_classInputField.text rollNo:currentStudent.rollNo];
             
-            NSLog(@"%ld", indexPath.row);
+//            NSLog(@"%ld", indexPath.row);
             
             [self->_removedObjectSet addObject:currentStudent];
             
@@ -121,6 +123,7 @@
 
 - (IBAction)showStudentsButtonAction:(id)sender {
     _fetchedData = (NSMutableArray *)[Students fetchDataFromStudentEntityForStudentClass:_classInputField.text];
+    
     _removedObjectSet = [[NSMutableSet alloc] init];
     
     if (_fetchedData.count == 0) {

@@ -26,6 +26,7 @@
     [super viewDidLoad];
     
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popAttendenceRecordOfAStudentViewController)];
+    
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
     
     [self.view addGestureRecognizer:rightSwipe];
@@ -45,7 +46,7 @@
 
 
 
-- (void)popAttendenceRecordOfAStudentViewController{
+- (void)popAttendenceRecordOfAStudentViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -72,7 +73,7 @@
     return [_fetchedData count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttendenceRecordOfAStudentCell"];
     
     UILabel *dateLabel = [cell viewWithTag:1];

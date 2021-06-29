@@ -31,15 +31,18 @@
     _studentClassInput.inputView = pickerView;
     
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popEditAttendenceViewController)];
+    
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    
     [self.view addGestureRecognizer:rightSwipe];
 }
 
-- (void)popEditAttendenceViewController{
+
+- (void)popEditAttendenceViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"editAttendenceSegue"]) {
         _editAttendenceAttendenceViewController = [segue destinationViewController];
         _editAttendenceAttendenceViewController.studentClass = _studentClassInput.text;
@@ -60,11 +63,11 @@
     return _studentClasses.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_studentClasses objectAtIndex: row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _studentClassInput.text = [_studentClasses objectAtIndex:row];
     [_studentClassInput resignFirstResponder];
 }
@@ -77,7 +80,7 @@
     NSString *dateString = [dateFormatter stringFromDate:_dateInput.date];
     _editAttendenceAttendenceViewController.attendenceDate = dateString;
     
-    if (_studentClassInput.text.length == 0){
+    if (_studentClassInput.text.length == 0) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"incomplete" message:@"Choose a class" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -87,7 +90,7 @@
 
         [self presentViewController:alert animated:YES completion:nil];
     }
-    else if (![AttendenceRecord doesAttendenceExistsForDate:dateString class:_studentClassInput.text]){
+    else if (![AttendenceRecord doesAttendenceExistsForDate:dateString class:_studentClassInput.text]) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"No data found for given class and date." preferredStyle:UIAlertControllerStyleAlert];
 

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    NSLog(@"class: %@   date: %@", _studentClass, _attendenceDate);
+//    NSLog(@"class: %@   date: %@", _studentClass, _attendenceDate);
     
     UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popEditAttendenceAttendenceViewController)];
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
@@ -85,13 +85,13 @@
     rollNoLabel.text = [NSString stringWithFormat:@"%lld", currentdata.rollNo];
     nameLabel.text = currentdata.name;
     
-    if ([currentdata.attendence isEqualToString:@"Absent"]){
+    if ([currentdata.attendence isEqualToString:@"Absent"]) {
         absentButton.enabled = NO;
         absentButton.alpha = 1;
 //        presentButton.enabled = YES;
 //        presentButton.alpha = 0.5;
     }
-    else{
+    else {
         presentButton.enabled = NO;
         presentButton.alpha = 1;
 //        absentButton.enabled = YES;
@@ -106,10 +106,10 @@
 
 
 - (void)absentButtonAction:(id)sender {
-    NSLog(@"%li", [sender tag]);
+//    NSLog(@"%li", [sender tag]);
     UIButton *correspondingPresentButton = [_presentButtons objectAtIndex:[sender tag]];
     UIButton *correspondingAbsentButton = [_absentButtons objectAtIndex:[sender tag]];
-    NSLog(@"count %ld", _presentButtons.count);
+//    NSLog(@"count %ld", _presentButtons.count);
     correspondingAbsentButton.enabled = NO;
     correspondingAbsentButton.alpha = 1;
     correspondingPresentButton.enabled = YES;

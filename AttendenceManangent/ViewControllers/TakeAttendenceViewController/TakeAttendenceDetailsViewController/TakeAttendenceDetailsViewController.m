@@ -22,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
-    
 //    _datePickerInput.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:10*60*60];
     
     _studentClasses = @[@"Nursery", @"Kindergarten", @"I", @"II", @"III", @"IV", @"V", @"VI", @"VII", @"VIII", @"IX", @"X", @"XI", @"XII"];
@@ -40,14 +38,14 @@
     _studentClassInputField.inputView = pickerView;
 }
 
--(void)popTakeAttendenceDetailsViewController{
+- (void)popTakeAttendenceDetailsViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-   if ([[segue identifier] isEqualToString:@"AttendenceSheetSegue"])
-   {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+   if ([[segue identifier] isEqualToString:@"AttendenceSheetSegue"]) {
+       
        _takeAttendenceAttendenceViewController = [segue destinationViewController];
        _takeAttendenceAttendenceViewController.studentClass = _studentClassInputField.text;
        _takeAttendenceAttendenceViewController.topicTaught = _topicInputField.text;
@@ -69,11 +67,11 @@
     return _studentClasses.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_studentClasses objectAtIndex: row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _studentClassInputField.text = [_studentClasses objectAtIndex:row];
     [_studentClassInputField resignFirstResponder];
 }
@@ -86,9 +84,9 @@
     [dateFormatter setDateFormat:@"YYYY/MM/dd"];
     NSString *dateString = [dateFormatter stringFromDate:_datePickerInput.date];
     
-    NSLog(@"Date is: %@", dateString);
+//    NSLog(@"Date is: %@", dateString);
     
-    if(_studentClassInputField.text.length == 0 || _topicInputField.text.length == 0){
+    if (_studentClassInputField.text.length == 0 || _topicInputField.text.length == 0) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incomplete" message:@"Please enter all the details." preferredStyle:UIAlertControllerStyleAlert];
 
@@ -99,7 +97,7 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }
-    else if ([AttendenceRecord doesAttendenceExistsForDate:dateString class:_studentClassInputField.text]){
+    else if ([AttendenceRecord doesAttendenceExistsForDate:dateString class:_studentClassInputField.text]) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Attendence already exists for given class and date." preferredStyle:UIAlertControllerStyleAlert];
 

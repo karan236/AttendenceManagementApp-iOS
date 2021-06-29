@@ -45,7 +45,7 @@
 }
 
 
--(void)popStudentListViewController{
+- (void)popStudentListViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -58,24 +58,25 @@
     return _studentClasses.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_studentClasses objectAtIndex: row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _classInputTextField.text = [_studentClasses objectAtIndex:row];
     [_classInputTextField resignFirstResponder];
 }
 
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (_fetchedData.count == 0){
         return 1;
     }
     return [_fetchedData count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
@@ -111,4 +112,5 @@
     
     [_tableView reloadData];
 }
+
 @end

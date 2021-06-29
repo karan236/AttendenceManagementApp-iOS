@@ -92,7 +92,7 @@
     
     [context deleteObject:[retrievedData objectAtIndex:0]];
 
-    NSLog(@"Class %@ roll %ld deleted", studentClass, (long)rollNo);
+//    NSLog(@"Class %@ roll %ld deleted", studentClass, (long)rollNo);
     
     [appdelegate saveContext];
 }

@@ -46,7 +46,7 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     
     for (int i=0; i<[_studentsOfMentionedClass count]; i++){
         [_studentAttendence addObject:@"-1"];
@@ -69,19 +69,20 @@
     
 }
 
--(void)setStudentClass:(NSString *)studentClass{
+- (void)setStudentClass:(NSString *)studentClass {
     _studentClass = studentClass;
 }
 
--(void)popTakeAttendenceAttendenceViewController{
+- (void)popTakeAttendenceAttendenceViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_studentsOfMentionedClass count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"attenceSheetCell"];
     
@@ -109,7 +110,8 @@
     return cell;
 }
 
--(void)absentButtonAction:(id)sender{
+
+- (void)absentButtonAction:(id)sender {
     
     UIButton *correspondingPresentButton = [_presentButtonResponse objectAtIndex:[sender tag]];
     BOOL isCorrespondingPresentButtonEnabled = correspondingPresentButton.isEnabled;
@@ -149,12 +151,13 @@
     
 }
 
-- (void)presentButtonAction:(id)sender{
+
+- (void)presentButtonAction:(id)sender {
     
     UIButton *correspondingAbsentButton = [_absentButtonsResponse objectAtIndex:[sender tag]];
     BOOL isCorrespondingAbsentButtonEnabled = correspondingAbsentButton.isEnabled;
     
-    if (!isCorrespondingAbsentButtonEnabled){
+    if (!isCorrespondingAbsentButtonEnabled) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Are you sure want to change the attendence status to present?" preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *yesActionButton = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
@@ -176,7 +179,7 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-    else{
+    else {
         
 //        NSLog(@"tapped on present button with tag: %li and done", [sender tag]);
         UIButton *btn = [_presentButtonResponse objectAtIndex:[sender tag]];
