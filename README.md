@@ -35,3 +35,4 @@ Concepts used:-
 17) Adding cell button action by adding target
 18) Application life cycle
 19) Application delgate
+20) NSSwipeGestureRecognizer (right swipe to navigate back)
